@@ -1,0 +1,35 @@
+.container {
+    /*height: 100%;*/
+}
+
+.current_games {
+    margin: 30px 0 15px 0;
+    display: inline-block;
+}
+
+p {
+    display: inline-block;
+    margin: 0 0 10px 0;
+    color: #C4C4C4;
+
+}
+
+
+/* live*/
+
+.live {
+    border: 1px solid #FBB318;
+    border-radius: 10px;
+    width: 80px;
+    height: 40px;
+
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FBB318;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
