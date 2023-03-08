@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/betting_site/static/css/main.822a31da.css",
+    "main.js": "/betting_site/static/js/main.eeedd7da.js",
+    "static/js/787.fe3858d4.chunk.js": "/betting_site/static/js/787.fe3858d4.chunk.js",
+    "static/media/kunlunredstar.jpg": "/betting_site/static/media/kunlunredstar.c043bf4316a422d4569f.jpg",
+    "static/media/arsenal.png": "/betting_site/static/media/arsenal.db6cd5d5e5631e70ccb3.png",
+    "static/media/Oxford United.jpg": "/betting_site/static/media/Oxford United.e29b92b2a11bbea8746c.jpg",
+    "static/media/dinamo.png": "/betting_site/static/media/dinamo.fe87267238c080f4fbc4.png",
+    "static/media/valensia.png": "/betting_site/static/media/valensia.67a5ad1c2068afc23459.png",
+    "index.html": "/betting_site/index.html",
+    "main.822a31da.css.map": "/betting_site/static/css/main.822a31da.css.map",
+    "main.eeedd7da.js.map": "/betting_site/static/js/main.eeedd7da.js.map",
+    "787.fe3858d4.chunk.js.map": "/betting_site/static/js/787.fe3858d4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.822a31da.css",
+    "static/js/main.eeedd7da.js"
+  ]
+}
