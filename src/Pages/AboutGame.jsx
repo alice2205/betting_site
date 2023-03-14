@@ -1,8 +1,23 @@
 import React, {useState} from 'react';
 import s from "./AboutGame.module.css";
+import {useNavigate} from "react-router-dom";
 
 export const AboutGame = (props) => {
     const [active, setActive] = useState(true)
+    const [checked, setChecked] = useState(null)
+
+    const navigate = useNavigate()
+    const onClickHandler = () => {
+        setActive(prev => !prev)
+        navigate('/')
+}
+
+    const isChecked = (value) => value === checked;
+    const onSelect = ({target: {value}}) => {
+        setChecked(value)
+        console.log(checked)
+    }
+
 
     return (
         <>
@@ -19,30 +34,29 @@ export const AboutGame = (props) => {
                 <div className={s.coefficient}>
                     <div className={s.coefficient__box}>
                         <p>Хозяева</p>
-                        <div className={s.coefficient__value}>
-                            <p>{props.coefficient.p1}</p>
-                        </div>
+                        <input type="radio" id="1" name="radios" value="p1" checked={isChecked('p1')} onChange={onSelect}/>
+                        <label htmlFor="1">{props.coefficient.p1}</label>
                     </div>
                     <div className={s.coefficient__box}>
                         <p>Ничья</p>
-                        <div className={s.coefficient__value}>
-                            <p>{props.coefficient.x}</p>
-                        </div>
+                        <input type="radio" id="2" name="radios" value="x" checked={isChecked('x')} onChange={onSelect}/>
+                        <label htmlFor="2">{props.coefficient.x}</label>
                     </div>
                     <div className={s.coefficient__box}>
                         <p>Гости</p>
-                        <div className={s.coefficient__value}>
-                            <p>{props.coefficient.p2}</p>
-                        </div>
+                        <input type="radio" id="3" name="radios" value="p2" checked={isChecked('p2')} onChange={onSelect}/>
+                        <label htmlFor="3">{props.coefficient.p2}</label>
                     </div>
-
                 </div>
             </div>
             <div className={s.card}>
                 Ставка
-                <div className={active ? 'button_active' : 'button'} onClick={()=> {setActive(prev => !prev)}}>Сделать ставку</div>
+                <button className='button' onClick={()=> {onClickHandler()}} disabled={checked===null}>Сделать ставку</button>
             </div>
         </>
-
     );
-};
+
+
+}
+
+
