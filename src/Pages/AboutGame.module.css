@@ -70,7 +70,6 @@ img {
     margin: 15px;
 }
 input {
-
     opacity: 0;
     position: fixed;
     width: 0;
@@ -94,7 +93,38 @@ input:checked + label {
     color: #111217;
 }
 
+.button {
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    background-color: #FBB318;
+    color: black;
+    border-radius: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 
+.button:active {
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    color: black;
+    border-radius: 20px;
+    align-items: center;
 
+    display: flex;
+    justify-content: center;
+    background-color: #FBB318;
+}
+.button:hover {
+    opacity: 0.8;
+}
+
+.button:disabled {
+    background-color: dimgrey;
+    color: linen;
+    opacity: 1;
+}
 
 

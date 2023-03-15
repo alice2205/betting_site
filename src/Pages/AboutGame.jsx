@@ -10,14 +10,12 @@ export const AboutGame = (props) => {
     const onClickHandler = () => {
         setActive(prev => !prev)
         navigate('/')
-}
+    }
 
     const isChecked = (value) => value === checked;
     const onSelect = ({target: {value}}) => {
         setChecked(value)
-        console.log(checked)
     }
-
 
     return (
         <>
@@ -51,12 +49,10 @@ export const AboutGame = (props) => {
             </div>
             <div className={s.card}>
                 Ставка
-                <button className='button' onClick={()=> {onClickHandler()}} disabled={checked===null}>Сделать ставку</button>
+                <button className={s.button} onClick={()=> {onClickHandler()}} disabled={checked===null}>Сделать ставку</button>
             </div>
         </>
     );
-
-
 }
 
 
