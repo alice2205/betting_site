@@ -1,12 +1,4 @@
-.modal {
-    width: 300px;
-    height: 100px;
-    background-color: cadetblue;
-}
-
 .modal__content {
-    background-color: #fbb318;
-    width: 150px;
-    height: 80px;
-    color: #fbb318;
+    color: black;
+    text-align: left;
 }

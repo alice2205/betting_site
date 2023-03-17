@@ -1,15 +1,19 @@
 import React, {useState} from 'react';
 import s from "./AboutGame.module.css";
 import {useNavigate} from "react-router-dom";
+import Modal from "../components/modal/Modal";
 
 export const AboutGame = (props) => {
     const [active, setActive] = useState(true)
     const [checked, setChecked] = useState(null)
+    const [modalActive, setModalActive] = useState(false)
+
 
     const navigate = useNavigate()
     const onClickHandler = () => {
         setActive(prev => !prev)
-        navigate('/')
+        // navigate('/')
+        setModalActive(true)
     }
 
     const isChecked = (value) => value === checked;
@@ -19,6 +23,8 @@ export const AboutGame = (props) => {
 
     return (
         <>
+            {<Modal active={modalActive} setActive={setModalActive}/>}
+
             <div className={s.card}>
                 <div className={s.card__team}>
                     <img src={props.title.team1.img}/>
