@@ -53,8 +53,10 @@ export const AboutGame = (props) => {
                     </div>
                 </div>
             </div>
+            <input type={"text"}></input>
             <div className={s.card}>
                 Ставка
+
                 <button className={s.button} onClick={()=> {onClickHandler()}} disabled={checked===null}>Сделать ставку</button>
             </div>
         </>
