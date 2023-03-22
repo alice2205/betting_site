@@ -24,7 +24,6 @@ export const AboutGame = (props) => {
     return (
         <>
             {<Modal active={modalActive} setActive={setModalActive}/>}
-
             <div className={s.card}>
                 <div className={s.card__team}>
                     <img src={props.title.team1.img}/>
@@ -35,10 +34,10 @@ export const AboutGame = (props) => {
                     <p>{props.title.team2.name}</p>
                 </div>
                 <span>{props.data}</span>
-                <div className={s.coefficient}>
-                    <div className={s.coefficient__box}>
+                <div className={s.coefficient} >
+                    <div className={s.coefficient__box} >
                         <p>Хозяева</p>
-                        <input type="radio" id="1" name="radios" value="p1" checked={isChecked('p1')} onChange={onSelect}/>
+                        <input type="radio" id="1" name="radios" value="p1"  checked={isChecked('p1')} onChange={onSelect}/>
                         <label htmlFor="1">{props.coefficient.p1}</label>
                     </div>
                     <div className={s.coefficient__box}>

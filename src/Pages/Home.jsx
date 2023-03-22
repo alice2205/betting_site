@@ -7,6 +7,7 @@ export const Home = (props) => {
         <div className={s.container} >
             <div className={s.current_games} >
                 <p>Текущие события</p>
+                <input type="text"/>
                 <div className={s.live} >Live</div>
             </div>
             {props.items.map(el=>
