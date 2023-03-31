@@ -7,7 +7,11 @@ export const AboutGame = (props) => {
     const [active, setActive] = useState(true)
     const [checked, setChecked] = useState(null)
     const [modalActive, setModalActive] = useState(false)
+    const [onchange, setOnchange] = useState(null)
 
+    // const onChangeHandler = (e) => {
+    //     setOnchange(e.currentTarget.value)
+    // }
 
     const navigate = useNavigate()
     const onClickHandler = () => {
@@ -17,8 +21,10 @@ export const AboutGame = (props) => {
     }
 
     const isChecked = (value) => value === checked;
-    const onSelect = ({target: {value}}) => {
+    const onSelect = (e, {target: {value}}) => {
         setChecked(value)
+        setOnchange(e.currentTarget.value)
+        console.log(onchange)
     }
 
     return (
